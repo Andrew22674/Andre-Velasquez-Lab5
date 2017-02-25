@@ -22,7 +22,7 @@ funcionP funcionP::operator+(funcionP* otra){
       if(this -> grado > otra -> getGrado()){
         temp.setGrado(this -> grado);
         int count = 0;
-        for (int i = 0 ; i < this -> coeficientes.size(); i++) {
+        for (int i = 0 ; i < this -> coeficientes.size()-1; i++) {
           if(count < otra -> getGrado()){
             temp.setCoeficiente(this -> getCoeficiente(i));
           }else{
@@ -35,7 +35,7 @@ funcionP funcionP::operator+(funcionP* otra){
       else{
         temp.setGrado(otra -> getGrado());
         int count = 0;
-        for (int i = 0 ; i < otra -> getSize() ; i++) {
+        for (int i = 0 ; i < otra -> getSize()-1 ; i++) {
           if(count < this -> grado){
             temp.setCoeficiente(otra -> getCoeficiente(i));
           }else{
