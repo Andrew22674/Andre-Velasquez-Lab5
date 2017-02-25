@@ -108,6 +108,8 @@ bool funcionP::operator!=(funcionP* otra){
 }
 
 
+
+
 /*
 funcionP* funcionP::operator*(funcionP* otra){
 

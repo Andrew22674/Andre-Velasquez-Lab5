@@ -71,13 +71,6 @@ int main() {
 
       *C = *A + B;
       cout << C;
-      /*
-      int cont = 0;
-      for (int i = 0; i < C -> getSize(); i++) {
-        cout << C -> getCoeficiente(i) << "x" << "^" << C -> getSize() - cont;
-        cont++;
-      }
-      cout << endl;*/
 
     }
 
