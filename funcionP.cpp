@@ -61,7 +61,7 @@ void funcionP::setGrado(int x){
   grado = x;
 }
 
-/*funcionP* funcionP::operator-(funcionP* otra){
+funcionP funcionP::operator-(funcionP* otra){
   funcionP temp;
   if(this -> grado == otra -> getGrado()){
     temp.setGrado(this -> grado);
@@ -72,6 +72,43 @@ void funcionP::setGrado(int x){
 
 }
 
+bool funcionP::operator==(funcionP* otra){
+  bool iguales = false;
+  if(this->getGrado() == otra-> getGrado()){
+    for (int i = 0; i < this -> getSize(); i++) {
+      if(this -> getCoeficiente(i) == otra -> getCoeficiente(i)){
+        iguales = true;
+      }else{
+        iguales = false;
+        break;
+      }
+    }
+  }else{
+    iguales = false;
+  }
+  return iguales;
+}
+
+bool funcionP::operator!=(funcionP* otra){
+  bool noiguales = true;
+  if(this->getGrado() == otra-> getGrado()){
+    for (int i = 0; i < this -> getSize(); i++) {
+      if(this -> getCoeficiente(i) != otra -> getCoeficiente(i)){
+        noiguales = true;
+        break;
+      }else{
+        noiguales = false;
+      }
+    }
+
+  }else{
+    noiguales = true;
+  }
+  return noiguales;
+}
+
+
+/*
 funcionP* funcionP::operator*(funcionP* otra){
 
 

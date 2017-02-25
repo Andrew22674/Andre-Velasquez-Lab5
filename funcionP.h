@@ -1,9 +1,9 @@
+#pragma once
 #include <vector>
 #include <iostream>
 
 using namespace std;
-#ifndef FUNCIONP_H
-#define FUNCIONP_H
+
 
 
 class funcionP{
@@ -25,7 +25,11 @@ public:
   int getSize();
 
   funcionP operator+(funcionP*);
-  /*funcionP* operator-(funcionP*);
+  funcionP operator-(funcionP*);
+
+  bool operator==(funcionP*);
+  bool operator!=(funcionP*);
+  /*
   funcionP* operator*(funcionP*);
 */
   friend ostream& operator << (ostream& out, funcionP* funcion){
@@ -41,5 +45,3 @@ public:
     }
   }
 };
-
-#endif
